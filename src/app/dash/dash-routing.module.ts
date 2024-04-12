@@ -16,6 +16,14 @@ const routes: Routes = [
         path: 'qr-generator',
         loadChildren: () => import('./qr-generator/qr-generator.module').then( m => m.QrGeneratorPageModule)
       },
+      {
+        path: 'date-picker',
+        loadChildren: () => import('./date-picker/date-picker.module').then( m => m.DatePickerPageModule)
+      },
+      {
+        path: 'scanner',
+        loadChildren: () => import('./scanner/scanner.module').then( m => m.ScannerPageModule)
+      },
     ]
   }
 ];

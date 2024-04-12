@@ -5,15 +5,9 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">dash</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
   <ion-tabs #myTabs (ionTabsDidChange)="tabChanged()">
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="dash">
+      <ion-tab-button tab="home">
         <ion-icon name="home-outline"></ion-icon>
         <ion-label>Inicio</ion-label>
       </ion-tab-button>
@@ -21,11 +15,11 @@
         <ion-icon name="qr-code-outline"></ion-icon>
         <ion-label>Qr-Generator</ion-label>
       </ion-tab-button>
-      <ion-tab-button tab="operaciones">
+      <ion-tab-button tab="date-picker">
         <ion-icon name="calendar"></ion-icon>
         <ion-label>DatePicker</ion-label>
       </ion-tab-button>
-      <ion-tab-button tab="disponibilidad">
+      <ion-tab-button tab="scanner">
         <ion-icon name="barcode"></ion-icon>
         <ion-label>Scanner</ion-label>
       </ion-tab-button>
