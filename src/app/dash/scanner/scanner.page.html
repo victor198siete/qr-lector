@@ -1,0 +1,31 @@
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Barcode Scanner</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card color="secondary">
+    <ion-card-header class="ion-text-center">
+      <ion-title>
+        {{scanning ? 'Scanning' : 'Not Scanning'}}
+      </ion-title>
+    </ion-card-header>
+  </ion-card>
+  <ion-card color="secondary">
+    <ion-card-header class="ion-text-center" *ngFor="let bc of barcodes">
+      <ion-title>
+        {{barcodes[0] === undefined ? 'No Scaned' : 'Scanned'}}
+      </ion-title>
+      <ion-item>
+        {{bc.rawValue}}
+      </ion-item>
+    </ion-card-header>
+  </ion-card>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button (click)="scan()" [disabled]="!supported">
+      <ion-icon name="scan"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

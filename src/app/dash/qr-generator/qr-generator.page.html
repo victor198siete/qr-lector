@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Qr Generator</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-card class="ion-text-center">
+  <canvas #qrCanvas [width]="400" [height]="400"></canvas>
+</ion-card>
+<ion-card class="ion-text-center">
+  <ion-item>
+    <ion-label position="floating">Texto a imprimir</ion-label>
+    <ion-input type="text" [(ngModel)]="textToPrint"></ion-input>
+  </ion-item>
+  <ion-button (click)="convertToPNG()">Generar Codigo QR</ion-button>
+  <ion-button color="danger" (click)="textToPrint=''">Limpiar Texto</ion-button>
+</ion-card>
+</ion-content>
